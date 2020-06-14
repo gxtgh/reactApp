@@ -4,6 +4,8 @@ const fs = require('fs');
 const path = require('path');
 const paths = require('./paths');
 
+const api_root = require('./root/index')
+
 // Make sure that including paths.js after env.js will read .env variables.
 delete require.cache[require.resolve('./paths')];
 
@@ -77,6 +79,7 @@ function getClientEnvironment(publicUrl) {
         // This should only be used as an escape hatch. Normally you would put
         // images into the `src` and `import` them in code to get their paths.
         PUBLIC_URL: publicUrl,
+        API_ROOT: api_root.env.API_ROOT,
         // We support configuring the sockjs pathname during development.
         // These settings let a developer run multiple simultaneous projects.
         // They are used as the connection `hostname`, `pathname` and `port`

@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import { Layout, Menu, Button } from 'antd';
 import {
-  AppstoreOutlined,
+  // AppstoreOutlined,
   MenuUnfoldOutlined,
   MenuFoldOutlined,
   PieChartOutlined,
-  DesktopOutlined,
-  ContainerOutlined,
+  // DesktopOutlined,
+  // ContainerOutlined,
   MailOutlined,
 } from '@ant-design/icons';
-import './index.css'
+import styles from  '../../style/index.module.scss'
+
 const { Header,  Sider, Content } = Layout;
 const { SubMenu } = Menu;
 class index extends Component {
@@ -22,10 +23,11 @@ class index extends Component {
     });
   };
     render() {
+        console.log(process.env)
         return (
-            <Layout className="r-layout">
-                <Sider className="r-sider" collapsed={this.state.collapsed}>
-                    <div className="r-logo">logo
+            <Layout className={styles.rLayout}>
+                <Sider className={styles.rSider} collapsed={this.state.collapsed}>
+                    <div className={styles.rLogo}>logo
                     </div>
                     <Menu 
                       defaultSelectedKeys={['1']}
@@ -39,7 +41,7 @@ class index extends Component {
                     </Menu>
                 </Sider>
                 <Layout>
-                    <Header className="r-header">
+                    <Header className={styles.rHeader}>
                       
                     <Button type="primary" onClick={this.toggleCollapsed} style={{ marginBottom: 16 }}>
                       {React.createElement(this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined)}
