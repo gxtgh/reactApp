@@ -23,7 +23,6 @@ class index extends Component {
     });
   };
     render() {
-        console.log(process.env)
         return (
             <Layout className={styles.rLayout}>
                 <Sider className={styles.rSider} collapsed={this.state.collapsed}>
@@ -42,7 +41,6 @@ class index extends Component {
                 </Sider>
                 <Layout>
                     <Header className={styles.rHeader}>
-                      
                     <Button type="primary" onClick={this.toggleCollapsed} style={{ marginBottom: 16 }}>
                       {React.createElement(this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined)}
                     </Button>

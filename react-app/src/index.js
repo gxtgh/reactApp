@@ -6,6 +6,7 @@ import reduce from './redux';//createStore方法第一个参数是reduce
 import App from './components/layout';
 import 'antd/dist/antd.css';
 import './style/index.css';
+import './style/antd.scss';
 // import * as serviceWorker from './serviceWorker';
 const store = createStore(reduce)
 
