@@ -13,7 +13,7 @@ import styles from  '../../style/index.module.scss'
 
 const { Header,  Sider, Content } = Layout;
 const { SubMenu } = Menu;
-class index extends Component {
+class Index extends Component {
   state = {
     collapsed: false,
   };
@@ -53,4 +53,4 @@ class index extends Component {
         );
     }
 }
-export default index;
+export default Index;
